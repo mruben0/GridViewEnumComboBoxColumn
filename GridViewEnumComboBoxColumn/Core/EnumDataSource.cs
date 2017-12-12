@@ -44,7 +44,9 @@ namespace GridViewEnumComboBoxColumn.Core
             var availableValues = GetAvailableValues(type);
             foreach (var item in availableValues)
             {
-                result.Add(item, resourceDict.FirstOrDefault(x => x.Key.Equals(item)).Value.ToString());
+                var dictionaryEntry = resourceDict.FirstOrDefault(x => x.Key.Equals(item));
+                var displayValue = dictionaryEntry.Value?.ToString() ?? item.ToString();
+                result.Add(item, displayValue);
             }
 
             return result;
