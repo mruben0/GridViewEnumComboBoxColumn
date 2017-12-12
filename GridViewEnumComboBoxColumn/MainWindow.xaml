@@ -1,0 +1,21 @@
+﻿<Window x:Class="GridViewEnumComboBoxColumn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GridViewEnumComboBoxColumn"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:core="clr-namespace:GridViewEnumComboBoxColumn.Core"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <telerik:RadGridView            
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding Products}">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Name}" />
+                <core:GridViewEnumComboBoxColumn DataMemberBinding="{Binding ProductType}" UseLocalizedValues="True" />
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+    </Grid>
+</Window>
