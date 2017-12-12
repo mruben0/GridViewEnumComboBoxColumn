@@ -132,6 +132,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.Chart.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.Data.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.DataServices60.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.GridView.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.Input.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Controls.Navigation.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Data.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.PersistenceFramework.dll" />
+    <Content Include="Libs\Telerik\Telerik.Windows.Themes.Material.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
