@@ -46,34 +46,40 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="Telerik.Windows.Controls">
-      <HintPath>Libs\Telerik\Telerik.Windows.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Chart">
       <HintPath>Libs\Telerik\Telerik.Windows.Controls.Chart.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Data">
-      <HintPath>Libs\Telerik\Telerik.Windows.Controls.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.DataServices60">
-      <HintPath>Libs\Telerik\Telerik.Windows.Controls.DataServices60.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.DataServices60.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.GridView">
-      <HintPath>Libs\Telerik\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Input">
-      <HintPath>Libs\Telerik\Telerik.Windows.Controls.Input.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Controls.Navigation">
-      <HintPath>Libs\Telerik\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Controls.RibbonView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Data">
-      <HintPath>Libs\Telerik\Telerik.Windows.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Data.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.PersistenceFramework">
       <HintPath>Libs\Telerik\Telerik.Windows.PersistenceFramework.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Windows.Themes.Material">
-      <HintPath>Libs\Telerik\Telerik.Windows.Themes.Material.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office2016">
+      <HintPath>..\..\..\..\..\Desktop\MonetaryValues\UI\MonetaryValues.UI\Libraries\Telerik\Telerik.Windows.Themes.Office2016.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -96,6 +102,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\EnumComboBox.cs" />
     <Compile Include="Core\EnumDataSource.cs" />
     <Compile Include="Core\EnumToLocConverter.cs" />
     <Compile Include="Core\GridViewEnumComboBoxColumn.cs" />

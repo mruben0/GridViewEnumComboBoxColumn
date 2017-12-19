@@ -8,9 +8,10 @@ using Telerik.Windows.Data;
 
 namespace GridViewEnumComboBoxColumn.Core
 {
-    class GridViewEnumComboBoxColumn : GridViewComboBoxColumn
+    internal class GridViewEnumComboBoxColumn : GridViewComboBoxColumn
     {
         public bool UseLocalizedValues { get; set; }
+
         public override FrameworkElement CreateCellElement(GridViewCell cell, object dataItem)
         {
             if (UseLocalizedValues)
@@ -41,33 +42,33 @@ namespace GridViewEnumComboBoxColumn.Core
             }
         }
 
-        public override FrameworkElement CreateFieldFilterEditor()
-        {
-            if (UseLocalizedValues)
-            {
-                var type = DataType;
-                RadComboBox radComboBox = new RadComboBox
-                {
-                    SelectedValuePath = "Value",
-                    DisplayMemberPath = "DisplayName"
-                };
+        //public override FrameworkElement CreateFieldFilterEditor()
+        //{
+        //    if (UseLocalizedValues)
+        //    {
+        //        var type = DataType;
+        //        RadComboBox radComboBox = new RadComboBox
+        //        {
+        //            SelectedValuePath = "Value",
+        //            DisplayMemberPath = "DisplayName"
+        //        };
 
-                List<EnumMemberViewModel> list = new List<EnumMemberViewModel>
-                {
-                    new EnumMemberViewModel(OperatorValueFilterDescriptorBase.UnsetValue, "Unset", string.Empty)
-                };
+        //        List<EnumMemberViewModel> list = new List<EnumMemberViewModel>
+        //        {
+        //            new EnumMemberViewModel(OperatorValueFilterDescriptorBase.UnsetValue, "Unset", string.Empty)
+        //        };
 
-                list.AddRange(EnumDataSource.GetLocalizedEnumFilters(type));
-                radComboBox.ItemsSource = list;
-                Binding binding = new Binding("Value")
-                {
-                    Mode = BindingMode.TwoWay
-                };
-                radComboBox.SetBinding(Selector.SelectedValueProperty, binding);
-                return radComboBox;
-            }
+        //        list.AddRange(EnumDataSource.GetLocalizedEnumFilters(type));
+        //        radComboBox.ItemsSource = list;
+        //        Binding binding = new Binding("Value")
+        //        {
+        //            Mode = BindingMode.TwoWay
+        //        };
+        //        radComboBox.SetBinding(Selector.SelectedValueProperty, binding);
+        //        return radComboBox;
+        //    }
 
-            return base.CreateFieldFilterEditor();
-        }
+        //    return base.CreateFieldFilterEditor();
+        //}
     }
 }
