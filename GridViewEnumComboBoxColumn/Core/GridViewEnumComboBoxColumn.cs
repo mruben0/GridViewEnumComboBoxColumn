@@ -8,9 +8,10 @@ using Telerik.Windows.Data;
 
 namespace GridViewEnumComboBoxColumn.Core
 {
-    class GridViewEnumComboBoxColumn : GridViewComboBoxColumn
+    internal class GridViewEnumComboBoxColumn : GridViewComboBoxColumn
     {
         public bool UseLocalizedValues { get; set; }
+
         public override FrameworkElement CreateCellElement(GridViewCell cell, object dataItem)
         {
             if (UseLocalizedValues)

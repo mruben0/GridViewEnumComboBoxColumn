@@ -8,6 +8,8 @@ namespace GridViewEnumComboBoxColumn
     public partial class MainWindow : Window
     {
         public ObservableCollection<Product> Products { get; set; }
+        public ProductType type { get; set; }
+
         public MainWindow()
         {
             var products = new List<Product>()
@@ -20,6 +22,9 @@ namespace GridViewEnumComboBoxColumn
                 new Product() {Name = "PR6", ProductType = ProductType.Milks},
             };
             Products = new ObservableCollection<Product>(products);
+
+            type = ProductType.Egg;
+
             DataContext = this;
             InitializeComponent();
         }

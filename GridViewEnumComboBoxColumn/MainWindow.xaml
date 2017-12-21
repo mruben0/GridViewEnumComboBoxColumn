@@ -3,13 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GridViewEnumComboBoxColumn"
+        xmlns:local="clr-namespace:GridViewEnumComboBoxColumn.Example"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         xmlns:core="clr-namespace:GridViewEnumComboBoxColumn.Core"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="525">
     <Grid>
-        <telerik:RadGridView            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <telerik:RadGridView
+            Grid.Row="0"
             AutoGenerateColumns="False"
             ItemsSource="{Binding Products}">
             <telerik:RadGridView.Columns>
@@ -17,5 +22,7 @@
                 <core:GridViewEnumComboBoxColumn DataMemberBinding="{Binding ProductType}" UseLocalizedValues="True" />
             </telerik:RadGridView.Columns>
         </telerik:RadGridView>
+
+        <core:EnumComboBox Grid.Row="1" UseLocalizedValues="True" EnumBinding="{Binding type}" />
     </Grid>
 </Window>

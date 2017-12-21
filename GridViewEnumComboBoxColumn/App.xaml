@@ -2,6 +2,7 @@
     x:Class="GridViewEnumComboBoxColumn.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cc="clr-namespace:GridViewEnumComboBoxColumn.Core"
     xmlns:local="clr-namespace:GridViewEnumComboBoxColumn"
     StartupUri="MainWindow.xaml">
     <Application.Resources>
@@ -13,12 +14,12 @@
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Material;component/Themes/Telerik.Windows.Controls.GridView.xaml" />
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Material;component/Themes/Telerik.Windows.Controls.Input.xaml" />
 
-                <ResourceDictionary Source="/Telerik.Windows.Themes.Material;component/Themes/Telerik.Windows.Controls.Chart.xaml" />
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Material;component/Themes/Telerik.Windows.Controls.Data.xaml" />
                 <ResourceDictionary Source="/Telerik.Windows.Themes.Material;component/Themes/Telerik.Windows.Controls.Navigation.xaml" />
 
-                <ResourceDictionary Source="Example/LocalizedEnumValues.xaml"/>
+                <ResourceDictionary Source="Example/LocalizedEnumValues.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="cc:EnumComboBox" BasedOn="{StaticResource RadComboBoxStyle}" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
